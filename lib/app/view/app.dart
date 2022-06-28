@@ -20,7 +20,7 @@ class App extends StatelessWidget {
     return BlocProvider(
       create: (context) => SmsBloc(
         smsRepository: SmsRepository(),
-      )..add(SmsEvent.started()),
+      )..add(const SmsEvent.started()),
       child: MaterialApp(
         theme: ThemeData(
           appBarTheme: const AppBarTheme(color: Color(0xFF13B9FF)),

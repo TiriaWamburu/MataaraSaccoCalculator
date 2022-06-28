@@ -10,12 +10,12 @@ part 'sms_bloc.freezed.dart';
 class SmsBloc extends Bloc<SmsEvent, SmsState> {
   SmsBloc({
     required this.smsRepository,
-  }) : super(_Initial()) {
+  }) : super(const _Initial()) {
     on<SmsEvent>((event, emit) async {
       await event.when(
         started: () async {
           try {
-            emit(SmsState.loading());
+            emit(const SmsState.loading());
             final transactions = await smsRepository.getTransactions();
             emit(SmsState.loaded(transactions));
           } catch (e) {

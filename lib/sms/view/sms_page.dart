@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:maataara_sacco_calculator/sms/bloc/sms_bloc.dart';
 
 class TransactionsPage extends StatelessWidget {
-  const TransactionsPage({Key? key}) : super(key: key);
+  const TransactionsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class TransactionsPage extends StatelessWidget {
                 return const Center(child: Text('No Transactions Found'));
               } else {
                 return ListView.builder(
-                  itemBuilder: (context, idx) => Container(
+                  itemBuilder: (context, idx) => DecoratedBox(
                     decoration: BoxDecoration(
                       border: Border.all(color: Colors.greenAccent),
                     ),
