@@ -758,7 +758,7 @@ mixin _$Transaction {
   String get date => throw _privateConstructorUsedError;
   String get sms => throw _privateConstructorUsedError;
   String get receiptNo => throw _privateConstructorUsedError;
-  int get amount => throw _privateConstructorUsedError;
+  double get amount => throw _privateConstructorUsedError;
   String get account => throw _privateConstructorUsedError;
   String get receivedAt => throw _privateConstructorUsedError;
   String get numberPlate => throw _privateConstructorUsedError;
@@ -777,7 +777,7 @@ abstract class $TransactionCopyWith<$Res> {
       {String date,
       String sms,
       String receiptNo,
-      int amount,
+      double amount,
       String account,
       String receivedAt,
       String numberPlate});
@@ -817,7 +817,7 @@ class _$TransactionCopyWithImpl<$Res> implements $TransactionCopyWith<$Res> {
       amount: amount == freezed
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
-              as int,
+              as double,
       account: account == freezed
           ? _value.account
           : account // ignore: cast_nullable_to_non_nullable
@@ -845,7 +845,7 @@ abstract class _$$_TransactionCopyWith<$Res>
       {String date,
       String sms,
       String receiptNo,
-      int amount,
+      double amount,
       String account,
       String receivedAt,
       String numberPlate});
@@ -887,7 +887,7 @@ class __$$_TransactionCopyWithImpl<$Res> extends _$TransactionCopyWithImpl<$Res>
       amount: amount == freezed
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
-              as int,
+              as double,
       account: account == freezed
           ? _value.account
           : account // ignore: cast_nullable_to_non_nullable
@@ -923,7 +923,7 @@ class _$_Transaction implements _Transaction {
   @override
   final String receiptNo;
   @override
-  final int amount;
+  final double amount;
   @override
   final String account;
   @override
@@ -974,7 +974,7 @@ abstract class _Transaction implements Transaction {
       {required final String date,
       required final String sms,
       required final String receiptNo,
-      required final int amount,
+      required final double amount,
       required final String account,
       required final String receivedAt,
       required final String numberPlate}) = _$_Transaction;
@@ -986,7 +986,7 @@ abstract class _Transaction implements Transaction {
   @override
   String get receiptNo => throw _privateConstructorUsedError;
   @override
-  int get amount => throw _privateConstructorUsedError;
+  double get amount => throw _privateConstructorUsedError;
   @override
   String get account => throw _privateConstructorUsedError;
   @override

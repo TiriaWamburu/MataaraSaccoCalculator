@@ -18,14 +18,14 @@ class SmsRepository {
     final account = accountRegex.stringMatch(sms)!;
 
     final amountRegex = RegExp(
-      r'^KES \d{0,}.00 ',
+      r'KES \d{0,}.00 ',
       dotAll: true,
       multiLine: true,
     );
-    // if (!amountRegex.hasMatch(sms)) {
-    //   throw Exception('Amount not found when parsing sms');
-    // }
-    // final amount = int.tryParse(amountRegex.stringMatch(sms)!)!;
+    if (!amountRegex.hasMatch(sms)) {
+      throw Exception('Amount not found when parsing sms');
+    }
+    final amount = amountRegex.stringMatch(sms)!.replaceAll('KES ', '');
 
     final receivedAtRegex = RegExp(r'Received at \w{0,} \w{0,}');
     if (!receivedAtRegex.hasMatch(sms)) {
@@ -56,7 +56,7 @@ class SmsRepository {
       date: date.replaceAll('on ', ''),
       sms: sms,
       receiptNo: receiptNo.replaceAll('Receipt No.: ', ''),
-      amount: 1000,
+      amount: double.parse(amount),
       receivedAt: receivedAt.replaceAll('Received at ', ''),
       numberPlate: numberPlate.replaceAll('Payment Reference : ', ''),
     );
