@@ -14,8 +14,8 @@ class Transaction with _$Transaction {
     required String date,
     required String sms,
     required String receiptNo,
-    required String name,
     required int amount,
+    required String account,
     required String receivedAt,
     required String numberPlate,
   }) = _Transaction;

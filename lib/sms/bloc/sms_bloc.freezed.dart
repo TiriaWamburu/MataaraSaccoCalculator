@@ -758,8 +758,8 @@ mixin _$Transaction {
   String get date => throw _privateConstructorUsedError;
   String get sms => throw _privateConstructorUsedError;
   String get receiptNo => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
   int get amount => throw _privateConstructorUsedError;
+  String get account => throw _privateConstructorUsedError;
   String get receivedAt => throw _privateConstructorUsedError;
   String get numberPlate => throw _privateConstructorUsedError;
 
@@ -777,8 +777,8 @@ abstract class $TransactionCopyWith<$Res> {
       {String date,
       String sms,
       String receiptNo,
-      String name,
       int amount,
+      String account,
       String receivedAt,
       String numberPlate});
 }
@@ -796,8 +796,8 @@ class _$TransactionCopyWithImpl<$Res> implements $TransactionCopyWith<$Res> {
     Object? date = freezed,
     Object? sms = freezed,
     Object? receiptNo = freezed,
-    Object? name = freezed,
     Object? amount = freezed,
+    Object? account = freezed,
     Object? receivedAt = freezed,
     Object? numberPlate = freezed,
   }) {
@@ -814,14 +814,14 @@ class _$TransactionCopyWithImpl<$Res> implements $TransactionCopyWith<$Res> {
           ? _value.receiptNo
           : receiptNo // ignore: cast_nullable_to_non_nullable
               as String,
-      name: name == freezed
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
       amount: amount == freezed
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
               as int,
+      account: account == freezed
+          ? _value.account
+          : account // ignore: cast_nullable_to_non_nullable
+              as String,
       receivedAt: receivedAt == freezed
           ? _value.receivedAt
           : receivedAt // ignore: cast_nullable_to_non_nullable
@@ -845,8 +845,8 @@ abstract class _$$_TransactionCopyWith<$Res>
       {String date,
       String sms,
       String receiptNo,
-      String name,
       int amount,
+      String account,
       String receivedAt,
       String numberPlate});
 }
@@ -866,8 +866,8 @@ class __$$_TransactionCopyWithImpl<$Res> extends _$TransactionCopyWithImpl<$Res>
     Object? date = freezed,
     Object? sms = freezed,
     Object? receiptNo = freezed,
-    Object? name = freezed,
     Object? amount = freezed,
+    Object? account = freezed,
     Object? receivedAt = freezed,
     Object? numberPlate = freezed,
   }) {
@@ -884,14 +884,14 @@ class __$$_TransactionCopyWithImpl<$Res> extends _$TransactionCopyWithImpl<$Res>
           ? _value.receiptNo
           : receiptNo // ignore: cast_nullable_to_non_nullable
               as String,
-      name: name == freezed
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
       amount: amount == freezed
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
               as int,
+      account: account == freezed
+          ? _value.account
+          : account // ignore: cast_nullable_to_non_nullable
+              as String,
       receivedAt: receivedAt == freezed
           ? _value.receivedAt
           : receivedAt // ignore: cast_nullable_to_non_nullable
@@ -911,8 +911,8 @@ class _$_Transaction implements _Transaction {
       {required this.date,
       required this.sms,
       required this.receiptNo,
-      required this.name,
       required this.amount,
+      required this.account,
       required this.receivedAt,
       required this.numberPlate});
 
@@ -923,9 +923,9 @@ class _$_Transaction implements _Transaction {
   @override
   final String receiptNo;
   @override
-  final String name;
-  @override
   final int amount;
+  @override
+  final String account;
   @override
   final String receivedAt;
   @override
@@ -933,7 +933,7 @@ class _$_Transaction implements _Transaction {
 
   @override
   String toString() {
-    return 'Transaction(date: $date, sms: $sms, receiptNo: $receiptNo, name: $name, amount: $amount, receivedAt: $receivedAt, numberPlate: $numberPlate)';
+    return 'Transaction(date: $date, sms: $sms, receiptNo: $receiptNo, amount: $amount, account: $account, receivedAt: $receivedAt, numberPlate: $numberPlate)';
   }
 
   @override
@@ -944,8 +944,8 @@ class _$_Transaction implements _Transaction {
             const DeepCollectionEquality().equals(other.date, date) &&
             const DeepCollectionEquality().equals(other.sms, sms) &&
             const DeepCollectionEquality().equals(other.receiptNo, receiptNo) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality().equals(other.amount, amount) &&
+            const DeepCollectionEquality().equals(other.account, account) &&
             const DeepCollectionEquality()
                 .equals(other.receivedAt, receivedAt) &&
             const DeepCollectionEquality()
@@ -958,8 +958,8 @@ class _$_Transaction implements _Transaction {
       const DeepCollectionEquality().hash(date),
       const DeepCollectionEquality().hash(sms),
       const DeepCollectionEquality().hash(receiptNo),
-      const DeepCollectionEquality().hash(name),
       const DeepCollectionEquality().hash(amount),
+      const DeepCollectionEquality().hash(account),
       const DeepCollectionEquality().hash(receivedAt),
       const DeepCollectionEquality().hash(numberPlate));
 
@@ -974,8 +974,8 @@ abstract class _Transaction implements Transaction {
       {required final String date,
       required final String sms,
       required final String receiptNo,
-      required final String name,
       required final int amount,
+      required final String account,
       required final String receivedAt,
       required final String numberPlate}) = _$_Transaction;
 
@@ -986,9 +986,9 @@ abstract class _Transaction implements Transaction {
   @override
   String get receiptNo => throw _privateConstructorUsedError;
   @override
-  String get name => throw _privateConstructorUsedError;
-  @override
   int get amount => throw _privateConstructorUsedError;
+  @override
+  String get account => throw _privateConstructorUsedError;
   @override
   String get receivedAt => throw _privateConstructorUsedError;
   @override
